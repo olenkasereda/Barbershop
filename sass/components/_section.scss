@@ -1,22 +1,28 @@
 .section {
-	@media screen and (max-width: ($desktop - 1)) {
-		padding-top: 60px;
-		padding-bottom: 60px;
-	}
-	padding-top: 94px;
-	padding-bottom: 94px;
+  padding-top: 84px;
+  padding-bottom: 84px;
+  @media screen and (min-width: 768px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 130px;
+    padding-bottom: 130px;
+  }
 }
 
-.section-name {
-	margin-bottom: 30px;
-	font-weight: 700;
-	font-size: 36px;
-	line-height: 1.7;
-	text-align: center;
-	letter-spacing: 0.03em;
-	color: $text-color;
-	@media screen and (max-width: ($desktop - 1)) {
-		font-size: 28px;
-		line-height: 1.18;
-	}
+.section-title {
+  font-family: var(--secondary-font), sans-serif;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.17;
+  letter-spacing: 0.05em;
+
+  &-mode-light {
+    color: #303030;
+  }
+
+  &-mode-dark {
+    color: #ffffff;
+  }
 }

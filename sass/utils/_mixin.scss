@@ -1,0 +1,34 @@
+// Font
+
+@mixin font($size: null, $style: null, $weight: null, $line: null, $letter: null) {
+  font-size: $size;
+  font-style: $style;
+  font-weight: $weight;
+  line-height: $line;
+  letter-spacing: $letter;
+}
+
+//   @include font($size: null, $style: null, $weight: null, $line: null, $letter: null)
+
+// Flex
+
+@mixin flex(
+  $dir: null,
+  $wrap: null,
+  $justify: null,
+  $align: null,
+  $gap: null,
+  $column-gap: null,
+  $row-gap: null
+) {
+  display: flex;
+  flex-direction: $dir;
+  flex-wrap: $wrap;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+  column-gap: $column-gap;
+  row-gap: $row-gap;
+}
+
+//   @include flex($dir: null, $wrap: null, $justify: null, $align: null,  $gap: null,  $column-gap: null, $row-gap: null);

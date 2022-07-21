@@ -1,0 +1,19 @@
+.main-title {
+  color: var(--main-dark-theme);
+  font-family: var(--secondary-font), sans-serif;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 1.18;
+  letter-spacing: 0.05em;
+}
+
+.description {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+
+  color: var(--text-color);
+}
+.descr--mode-light {
+  color: var(--primary-text-color);
+}
