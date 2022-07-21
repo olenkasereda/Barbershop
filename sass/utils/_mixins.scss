@@ -1,0 +1,12 @@
+@mixin first-margin ($direction, $value) {
+    &:not(:first-child) {
+        margin-#{$direction}: $value;
+    }
+}
+
+@mixin last-margin ($direction, $value) {
+    &:not(:last-child) {
+        margin-#{$direction}: $value;
+    }
+}
+//   @include first-margin (left, 10px);
