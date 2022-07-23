@@ -1,28 +1,29 @@
 .button {
-  padding: 12px 20px;
+	width: 160px;
+	padding: 12px 0;
 
-  border: 1px solid var(--accent-txt-cl);
-  border-radius: 25px;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  background-color: transparent;
+	border: 1px solid var(--accent-txt-cl);
+	border-radius: 25px;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 1.33;
+	letter-spacing: 0.09em;
+	text-transform: uppercase;
+	background-color: transparent;
 
-  cursor: pointer;
+	cursor: pointer;
 
-  &:hover,
-  &:focus {
-    background-color: var(--accent-txt-cl);
-    color: var(--main-dark-theme);
-  }
+	&:hover,
+	&:focus {
+		background-color: var(--accent-txt-cl);
+		color: var(--main-dark-theme);
+	}
 }
 
 .btn-mode-light {
-  color: var(--main-light-theme);
+	color: var(--main-light-theme);
 }
 
 .btn-mode-dark {
-  color: var(--main-dark-theme);
+	color: var(--main-dark-theme);
 }

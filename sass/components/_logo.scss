@@ -1,0 +1,28 @@
+.logo {
+	cursor: pointer;
+	@media screen and (max-width: 767px) {
+		color: var(--main-dark-theme);
+
+		&-icon {
+			fill: currentColor;
+		}
+	}
+
+	@media screen and (min-width: 768px) {
+		color: var(--main-light-theme);
+
+		&-icon {
+			fill: currentColor;
+		}
+	}
+}
+
+.header__logo {
+	@media screen and (max-width: 767px) {
+		padding: 40px 31px;
+	}
+
+	@media screen and (min-width: 768px) {
+		padding: 32px 50px;
+	}
+}

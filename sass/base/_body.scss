@@ -1,16 +1,16 @@
 body {
-  font-family: var(--main-font), sans-serif;
-  font-size: 18px;
-  line-height: 1.67;
-  color: var(--text-color);
+	font-family: var(--main-font), sans-serif;
+	font-size: 18px;
+	line-height: 1.67;
+	color: var(--text-color);
 
-  background-color: #829663;
+	background-color: #829663;
 }
 
 body.modal-open {
-  overflow: hidden;
+	overflow: hidden;
 }
 
 body.no-scroll {
-  overflow-y: hidden;
+	overflow-y: hidden;
 }

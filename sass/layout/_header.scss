@@ -1,0 +1,78 @@
+.header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+.header__container {
+	width: 100%;
+
+	display: flex;
+	align-items: center;
+	@media screen and (max-width: 767px) {
+		// box-sizing: content-box;
+		justify-content: space-between;
+		// width: 480px;
+		// background-image: url("../images/mobile/Slider.jpg");
+		// background-size: cover;
+	}
+}
+
+.header__item {
+	// @extend %container;
+
+	@media screen and (max-width: 767px) {
+		// position: relative;
+		height: 60px;
+	}
+
+	@media screen and (min-width: 768px) {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
+.nav {
+	@media screen and (max-width: 767px) {
+		display: none;
+	}
+}
+
+.nav__list {
+	display: flex;
+	gap: 24px;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 1.33;
+	letter-spacing: 0.1em;
+	width: max-content;
+	color: #ffffff;
+
+	@media screen and (min-width: 1200px) {
+		gap: 23px;
+	}
+}
+.header__group {
+	@media screen and (min-width: 768px) {
+		display: flex;
+		align-items: center;
+		margin-left: auto;
+		gap: 40px;
+	}
+
+	@media screen and (max-width: 767px) {
+		display: none;
+	}
+}
+
+.header__contact {
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 1.33;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+
+	color: #ffffff;
+	@media screen and (max-width: 1199px) {
+		display: none;
+	}
+}
