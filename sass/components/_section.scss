@@ -1,28 +1,26 @@
 .section {
-  padding-top: 84px;
-  padding-bottom: 84px;
-  @media screen and (min-width: 768px) {
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
-  @media screen and (min-width: 1200px) {
-    padding-top: 130px;
-    padding-bottom: 130px;
-  }
+	padding-top: 84px;
+	padding-bottom: 84px;
+	@media screen and (min-width: 768px) {
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+	@media screen and (min-width: 1200px) {
+		padding-top: 130px;
+		padding-bottom: 130px;
+	}
 }
 
 .section-title {
-  font-family: var(--secondary-font), sans-serif;
-  font-weight: 700;
-  font-size: 42px;
-  line-height: 1.17;
-  letter-spacing: 0.05em;
+	font-weight: 700;
+	font-size: 42px;
+	line-height: 1.17;
+	letter-spacing: 0.05em;
+	&-mode-light {
+		color: #303030;
+	}
 
-  &-mode-light {
-    color: #303030;
-  }
-
-  &-mode-dark {
-    color: #ffffff;
-  }
+	&-mode-dark {
+		color: #ffffff;
+	}
 }

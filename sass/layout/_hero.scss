@@ -1,0 +1,19 @@
+.hero-left-side {
+	@media screen and (max-width: 1199px) {
+		display: none;
+	}
+}
+
+.hero-container {
+	position: relative;
+	background-position: top right, center;
+	margin: 0 auto;
+	z-index: -1;
+	@media screen and (max-width: 1199px) {
+		width: 510px;
+		height: 580px;
+		background-image: url(../../images/hero/hero_mob.jpg);
+		background-repeat: no-repeat;
+		background-position: top right, center;
+	}
+}
