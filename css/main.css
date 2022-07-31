@@ -636,7 +636,7 @@ img {
     padding-top: 208px;
     padding-bottom: 183px;
     margin: 0 -32px;
-    background-image: url("../../images/mobile/hero-3.webp");
+    background-image: url(../images/mobile/hero-3.webp);
     background-size: cover;
     background-repeat: no-repeat;
   }
