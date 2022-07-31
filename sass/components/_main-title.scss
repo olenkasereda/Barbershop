@@ -1,19 +1,26 @@
 .main-title {
-  color: var(--main-dark-theme);
-  font-family: var(--secondary-font), sans-serif;
-  font-weight: 700;
-  font-size: 72px;
-  line-height: 1.18;
-  letter-spacing: 0.05em;
+	color: var(--main-dark-theme);
+	font-family: var(--secondary-font), sans-serif;
+	font-weight: 700;
+	font-size: 72px;
+	line-height: 1.18;
+	letter-spacing: 0.05em;
+	@media screen and (max-width: 767px) {
+		font-size: 48px;
+		line-height: 1.17;
+		letter-spacing: 0.05em;
+
+		color: #ffffff;
+	}
 }
 
 .description {
-  font-size: 18px;
-  line-height: 1.67;
-  letter-spacing: 0.02em;
+	font-size: 18px;
+	line-height: 1.67;
+	letter-spacing: 0.02em;
 
-  color: var(--text-color);
+	color: var(--text-color);
 }
 .descr--mode-light {
-  color: var(--primary-text-color);
+	color: var(--primary-text-color);
 }

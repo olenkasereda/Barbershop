@@ -1,19 +1,94 @@
+// .hero {
+// 	position: static;
+// 	background-image: url(../../images/hero/hero_mob.jpg);
+// 	background-repeat: no-repeat;
+// 	padding: 208px 143px 183px 31px;
+// }
+// .hero-left-side {
+// 	@media screen and (max-width: 1199px) {
+// 		display: none;
+// 	}
+// }
+
+// .hero-container {
+// 	position: relative;
+// 	background-position: top right, center;
+// 	margin: 0 auto;
+// 	z-index: -1;
+// 	@media screen and (max-width: 1199px) {
+// 		width: 510px;
+// 		height: 580px;
+// 		background-image: url(../../images/hero/hero_mob.jpg);
+// 		background-repeat: no-repeat;
+// 		background-position: top right, center;
+// 	}
+// }
+.hero {
+	background-color: rgba(25, 28, 38, 0.2);
+}
+
+.hero-right-side {
+	@media screen and (max-width: 767px) {
+		padding-left: 31px;
+		padding-right: 143px;
+		padding-top: 208px;
+		padding-bottom: 183px;
+
+		margin: 0 -32px;
+		// Для ретіна екранів мобільна версія
+		background-image: url("../../images/mobile/hero-3.webp");
+		background-size: cover;
+		background-repeat: no-repeat;
+		@media (min-device-pixel-ratio: 2),
+			(-webkit-min-device-pixel-ratio: 2),
+			(min-resolution: 192dpi),
+			(min-resolution: 2dppx) {
+			background-image: url(/../images/mobile/hero-3.webp);
+		}
+	}
+	// Для ретіна екранів планшетна версія
+
+	@media screen and (min-width: 768px) {
+		background-image: url(../images/hero/hero_tab.jpg);
+
+		@media (min-device-pixel-ratio: 2),
+			(-webkit-min-device-pixel-ratio: 2),
+			(min-resolution: 192dpi),
+			(min-resolution: 2dppx) {
+			background-image: url(../images/hero/hero_tab@2x.jpg);
+		}
+	}
+
+	// Для ретіна екранів десктопна версія
+
+	@media screen and (min-width: 1200px) {
+		background-image: url(../images/hero/hero-bg.jpg);
+
+		@media (min-device-pixel-ratio: 2),
+			(-webkit-min-device-pixel-ratio: 2),
+			(min-resolution: 192dpi),
+			(min-resolution: 2dppx) {
+			background-image: url(../images/hero/hero-bg@2x.jpg);
+		}
+	}
+}
+.hero-descr {
+	margin-top: 20px;
+	font-family: "Open Sans";
+	font-size: 18px;
+	line-height: 1.67;
+	letter-spacing: 0.02em;
+
+	color: #9da4bd;
+}
 .hero-left-side {
-	@media screen and (max-width: 1199px) {
+	@media screen and (max-width: 767px) {
 		display: none;
 	}
 }
 
-.hero-container {
-	position: relative;
-	background-position: top right, center;
-	margin: 0 auto;
-	z-index: -1;
-	@media screen and (max-width: 1199px) {
-		width: 510px;
-		height: 580px;
-		background-image: url(../../images/hero/hero_mob.jpg);
-		background-repeat: no-repeat;
-		background-position: top right, center;
+.slider-controls {
+	@media screen and (max-width: 767px) {
+		display: none;
 	}
 }

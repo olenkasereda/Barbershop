@@ -4,7 +4,7 @@ body {
 	line-height: 1.67;
 	color: var(--text-color);
 
-	background-color: #829663;
+	background-color: #96637e;
 }
 
 body.modal-open {
@@ -14,3 +14,7 @@ body.modal-open {
 body.no-scroll {
 	overflow-y: hidden;
 }
+
+// body .mobile-menu.is-open {
+// 	overflow: hidden;
+// }

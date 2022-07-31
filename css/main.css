@@ -3,7 +3,7 @@ body {
   font-size: 18px;
   line-height: 1.67;
   color: var(--text-color);
-  background-color: #829663;
+  background-color: #96637e;
 }
 
 body.modal-open {
@@ -83,10 +83,9 @@ img {
   /* animation */
   --timing: cubic-bezier(0.4, 0, 0.2, 1);
   /* animation  */
-  --anima: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --anima: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  	border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  	box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .visually-hidden {
@@ -136,6 +135,14 @@ img {
   font-size: 72px;
   line-height: 1.18;
   letter-spacing: 0.05em;
+}
+@media screen and (max-width: 767px) {
+  .main-title {
+    font-size: 48px;
+    line-height: 1.17;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+  }
 }
 
 .description {
@@ -303,8 +310,6 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -620,26 +625,121 @@ img {
   }
 }
 
-@media screen and (max-width: 1199px) {
+.hero {
+  background-color: rgba(25, 28, 38, 0.2);
+}
+
+@media screen and (max-width: 767px) {
+  .hero-right-side {
+    padding-left: 31px;
+    padding-right: 143px;
+    padding-top: 208px;
+    padding-bottom: 183px;
+    margin: 0 -32px;
+    background-image: url("../../images/mobile/hero-3.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+@media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
+  .hero-right-side {
+    background-image: url(/../images/mobile/hero-3.webp);
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero-right-side {
+    background-image: url(../images/hero/hero_tab.jpg);
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero-right-side {
+    background-image: url(../images/hero/hero_tab@2x.jpg);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero-right-side {
+    background-image: url(../images/hero/hero-bg.jpg);
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero-right-side {
+    background-image: url(../images/hero/hero-bg@2x.jpg);
+  }
+}
+
+.hero-descr {
+  margin-top: 20px;
+  font-family: "Open Sans";
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9da4bd;
+}
+
+@media screen and (max-width: 767px) {
   .hero-left-side {
     display: none;
   }
 }
 
-.hero-container {
-  position: relative;
-  background-position: top right, center;
-  margin: 0 auto;
-  z-index: -1;
-}
-@media screen and (max-width: 1199px) {
-  .hero-container {
-    width: 510px;
-    height: 580px;
-    background-image: url(../../images/hero/hero_mob.jpg);
-    background-repeat: no-repeat;
-    background-position: top right, center;
+@media screen and (max-width: 767px) {
+  .slider-controls {
+    display: none;
   }
+}
+
+.benefits__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.benefits__item {
+  padding: 20px 35px;
+  width: 194px;
+  height: 133px;
+  background-color: #f7f7f7;
+}
+
+.benefits__numbers {
+  display: block;
+  position: relative;
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.4;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #303030;
+}
+
+.benefits__numbers::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 35px;
+  width: 13px;
+  height: 1px;
+  background-color: rgb(255, 108, 0);
+}
+
+.benefits__numbers::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 13px;
+  background-color: rgb(255, 108, 0);
+}
+
+.benefits__descr {
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  text-align: center;
+  color: #303030;
 }
 
 .price {
@@ -692,6 +792,8 @@ img {
 
 .price__list {
   padding: 30px;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(17, 19, 25, 0.8)), to(rgba(17, 19, 25, 0.8)));
   background-image: linear-gradient(90deg, rgba(17, 19, 25, 0.8), rgba(17, 19, 25, 0.8));
 }
@@ -719,11 +821,19 @@ img {
 .price-list-item {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
+  -webkit-transition: -webkit-transform 300ms ease-in-out;
+  transition: -webkit-transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
 }
 @media screen and (min-width: 1200px) {
   .price-list-item:first-child {
     background-image: -webkit-gradient(linear, left top, left bottom, from(#171a24), to(rgba(23, 26, 36, 0.2)));
     background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+    -webkit-transform-origin: left center;
+            transform-origin: left center;
+    -webkit-transform: rotateY(15deg);
+            transform: rotateY(15deg);
   }
 }
 @media screen and (max-width: 1199px) {
@@ -733,9 +843,17 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .price-list-item:last-child {
+    -webkit-transform: rotateY(-15deg);
+            transform: rotateY(-15deg);
+    -webkit-transform-origin: right center;
+            transform-origin: right center;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#090b13), to(rgba(9, 11, 19, 0.2)));
     background-image: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
   }
+}
+.price-list-item:hover {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
 }
 
 .price-inner-item {

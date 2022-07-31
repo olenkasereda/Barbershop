@@ -1,0 +1,51 @@
+.benefits__list {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.benefits__item {
+	// position: absolute;
+	padding: 20px 35px;
+	width: 194px;
+	height: 133px;
+	background-color: #f7f7f7;
+}
+.benefits__numbers {
+	display: block;
+	position: relative;
+	font-family: "Open Sans";
+	font-weight: 700;
+	font-size: 42px;
+	line-height: 1.4;
+	text-align: center;
+	letter-spacing: 0.05em;
+
+	color: #303030;
+}
+.benefits__numbers::before {
+	content: "";
+	position: absolute;
+	top: 15px;
+	left: 35px;
+	width: 13px;
+	height: 1px;
+	background-color: rgba(255, 108, 0, 1);
+}
+.benefits__numbers::after {
+	content: "";
+	position: absolute;
+	width: 1px;
+	height: 13px;
+	background-color: rgba(255, 108, 0, 1);
+}
+
+.benefits__descr {
+	font-family: "Open Sans";
+
+	font-weight: 600;
+	font-size: 11px;
+	line-height: 1.36;
+	text-align: center;
+
+	color: #303030;
+}
