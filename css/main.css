@@ -643,7 +643,7 @@ img {
 }
 @media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
   .hero-right-side {
-    background-image: url(/../images/mobile/hero-3.webp);
+    background-image: url(../images/mobile/hero-3.webp);
   }
 }
 @media screen and (min-width: 768px) {
