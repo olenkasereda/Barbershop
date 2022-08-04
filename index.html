@@ -35,7 +35,7 @@
 		<!-- <link rel="stylesheet" href="./css/styles.css" /> -->
 		<!-- custom styles end -->
 	</head>
-	<body>
+	<body data-body>
 		<header class="header" data-header>
 			<div class="container header__container">
 				<a class="header__logo logo" href="./index.html" aria-label="Логотип BarberShop">
@@ -68,10 +68,7 @@
 						</li>
 					</ul>
 					<a class="mobile-menu-tel link accent" href=""> +38 044 111 11 11</a>
-					<button
-						class="header__btn button btn--mode-dark animate__animated animate__bounce"
-						type="button"
-						data-modal-open
+					<button class="header__btn button btn--mode-dark animate__animated animate__bounce" type="button"
 						>онлайн-запись
 					</button>
 					<ul class="mobile-menu-socials list">
@@ -108,7 +105,8 @@
 						class="header__btn button btn--mode-dark animate__animated animate__bounce"
 						type="button"
 						data-modal-open
-						>онлайн-запись
+					>
+						онлайн-запись
 					</button>
 				</div>
 			</div>
@@ -117,11 +115,11 @@
 		<main>
 			<!-- hero -->
 			<section class="hero">
-				<div class="container hero-container">
+				<div class="hero-container">
 					<div class="hero-left-side">
 						<ul class="hero-list list">
 							<li class="hero-item">
-								<a class="hero-link link socials-link" href="">Instagram</a>
+								<a class="hero-link link socials-link hero-link--line" href="">Instagram</a>
 							</li>
 							<li class="hero-item">
 								<a class="hero-link link socials-link" href="">Youtube</a>
@@ -132,20 +130,20 @@
 						<p class="subtitle subtitle-mode-dark" lang="en">A hair salon for men in Kyiv</p>
 						<h1 class="main-title">BarberShop</h1>
 						<p class="hero-descr">Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно и со вкусом.</p>
+						<ul class="slider-pagination list">
+							<li class="slider-pagination-item current"></li>
+							<li class="slider-pagination-item"></li>
+							<li class="slider-pagination-item"></li>
+						</ul>
+						<!-- <ul class="slider-controls list">
+							<li>
+								<button class="slider-btn slider-btn-prev" type="button">Назад</button>
+							</li>
+							<li>
+								<button class="slider-btn slider-btn-next" type="button">Вперед</button>
+							</li>
+						</ul> -->
 					</div>
-					<ul class="slider-pagination list">
-						<li class="slider-pagination-item current"></li>
-						<li class="slider-pagination-item"></li>
-						<li class="slider-pagination-item"></li>
-					</ul>
-					<ul class="slider-controls list">
-						<li>
-							<button class="slider-btn slider-btn-prev" type="button">Назад</button>
-						</li>
-						<li>
-							<button class="slider-btn slider-btn-next" type="button">Вперед</button>
-						</li>
-					</ul>
 				</div>
 			</section>
 			<!-- about -->
@@ -239,7 +237,7 @@
 							нашего мастера, то уже никогда не сможешь быть прежним. Мы команда, которая всегда с клиентами "на одной
 							волне". Поэтому, мы всегда готовы усовершенствовать каждого, кто к нам приходит!
 						</p>
-						<button class="btn-mode-light button" type="button">онлайн-запись</button>
+						<button class="btn-mode-light button" type="button" data-modal-open>онлайн-запись</button>
 					</div>
 				</div>
 			</section>
@@ -291,7 +289,7 @@
 							</ul>
 						</li>
 					</ul>
-					<button class="btn-mode-dark button button__price" type="button">онлайн-запись</button>
+					<button class="btn-mode-dark button button__price" type="button" data-modal-open>онлайн-запись</button>
 				</div>
 			</section>
 			<!-- benefits -->
@@ -434,13 +432,47 @@
 				</div>
 			</section> -->
 			<!-- portfolio -->
-			<!-- <section class="portfolio">
+			<section class="portfolio section">
 				<div class="container">
 					<p class="subtitle">На латинском языке “барба” означает “борода”</p>
 					<h2 hidden>примеры работ</h2>
 					<ul class="portfolio__list list card-set">
 						<li class="portfolio__item card-set__item">
-							<img src="./images/gallery-1.jpg" alt="примеры работ 1" width="270" height="360" />
+							<picture>
+								<!-- desktop screen -->
+
+								<source
+									media="(min-width: 1200px)"
+									srcset="./images/portfolio/portfolio-1.jpg 1x, ./images/portfolio/portfolio-1@2x.jpg 2x"
+									type="image/jpg"
+								/>
+
+								<!-- tablet screen -->
+								<source
+									media="(min-width: 768px)"
+									srcset="./images/tablet/portfolio-1.webp 1x, ./images/tablet/portfolio-1@2x.webp 2x"
+									type="image/webp"
+								/>
+								<source
+									media="(min-width: 768px)"
+									srcset="./images/tablet/portfolio-1.jpg 1x, ./images/tablet/portfolio-1@2x.jpg 2x"
+									type="image/jpg"
+								/>
+
+								<!-- mobile screen -->
+								<source
+									media="(max-width: 767px)"
+									srcset="./images/mobile/portfolio-1.webp 1x, ./images/mobile/portfolio-1@2x.webp 2x"
+									type="image/webp"
+								/>
+								<source
+									media="(max-width: 767px)"
+									srcset="./images/mobile/portfolio-1.jpg 1x, ./images/mobile/portfolio-1@2x.jpg 2x"
+									type="image/jpg"
+								/>
+								<img src="./images/mobile/portfolio-1@2x.webp" alt="примеры работ 1" width="418" height="360" />
+							</picture>
+
 							<div class="overlay">
 								<p class="overlay__desc">
 									Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, tenetur! Lorem ipsum dolor sit amet
@@ -449,7 +481,41 @@
 							</div>
 						</li>
 						<li class="portfolio__item card-set__item">
-							<img src="./images/gallery-2.jpg" alt="примеры работ 2" width="270" height="360" />
+							<picture>
+								<!-- desktop screen -->
+
+								<source
+									media="(min-width: 1200px)"
+									srcset="./images/portfolio/portfolio-2.jpg 1x, ./images/portfolio/portfolio-2@2x.jpg 2x"
+									type="image/jpg"
+								/>
+
+								<!-- tablet screen -->
+								<source
+									media="(min-width: 768px)"
+									srcset="./images/tablet/portfolio-2.webp 1x, ./images/tablet/portfolio-2@2x.webp 2x"
+									type="image/webp"
+								/>
+								<source
+									media="(min-width: 768px)"
+									srcset="./images/tablet/portfolio-2.jpg 1x, ./images/tablet/portfolio-2@2x.jpg 2x"
+									type="image/jpg"
+								/>
+
+								<!-- mobile screen -->
+								<source
+									media="(max-width: 767px)"
+									srcset="./images/mobile/portfolio-2.webp 1x, ./images/mobile/portfolio-2@2x.webp 2x"
+									type="image/webp"
+								/>
+								<source
+									media="(max-width: 767px)"
+									srcset="./images/mobile/portfolio-2.jpg 1x, ./images/mobile/portfolio-2@2x.jpg 2x"
+									type="image/jpg"
+								/>
+								<img src="./images/mobile/portfolio-2@2x.webp" alt="примеры работ 2" width="418" height="360" />
+							</picture>
+
 							<div class="overlay">
 								<p class="overlay__desc">
 									Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, tenetur! Lorem ipsum dolor sit amet
@@ -458,7 +524,40 @@
 							</div>
 						</li>
 						<li class="portfolio__item card-set__item">
-							<img src="./images/gallery-3.jpg" alt="примеры работ 3" width="270" height="360" />
+							<picture>
+								<!-- desktop screen -->
+
+								<source
+									media="(min-width: 1200px)"
+									srcset="./images/portfolio/portfolio-3.jpg 1x, ./images/portfolio/portfolio-3@2x.jpg 2x"
+									type="image/jpg"
+								/>
+
+								<!-- tablet screen -->
+								<source
+									media="(min-width: 768px)"
+									srcset="./images/tablet/portfolio-3.webp 1x, ./images/tablet/portfolio-3@2x.webp 2x"
+									type="image/webp"
+								/>
+								<source
+									media="(min-width: 768px)"
+									srcset="./images/tablet/portfolio-3.jpg 1x, ./images/tablet/portfolio-3@2x.jpg 2x"
+									type="image/jpg"
+								/>
+
+								<!-- mobile screen -->
+								<source
+									media="(max-width: 767px)"
+									srcset="./images/mobile/portfolio-3.webp 1x, ./images/mobile/portfolio-3@2x.webp 2x"
+									type="image/webp"
+								/>
+								<source
+									media="(max-width: 767px)"
+									srcset="./images/mobile/portfolio-3.jpg 1x, ./images/mobile/portfolio-3@2x.jpg 2x"
+									type="image/jpg"
+								/>
+								<img src="./images/mobile/portfolio-3@2x.webp" alt="примеры работ 3" width="418" height="360" />
+							</picture>
 							<div class="overlay">
 								<p class="overlay__desc">
 									Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, tenetur! Lorem ipsum dolor sit amet
@@ -467,7 +566,40 @@
 							</div>
 						</li>
 						<li class="portfolio__item card-set__item">
-							<img src="./images/gallery-4.jpg" alt="примеры работ 4" width="270" height="360" />
+							<picture>
+								<!-- desktop screen -->
+
+								<source
+									media="(min-width: 1200px)"
+									srcset="./images/portfolio/portfolio-4.jpg 1x, ./images/portfolio/portfolio-4@2x.jpg 2x"
+									type="image/jpg"
+								/>
+
+								<!-- tablet screen -->
+								<source
+									media="(min-width: 768px)"
+									srcset="./images/tablet/portfolio-4.webp 1x, ./images/tablet/portfolio-4@2x.webp 2x"
+									type="image/webp"
+								/>
+								<source
+									media="(min-width: 768px)"
+									srcset="./images/tablet/portfolio-4.jpg 1x, ./images/tablet/portfolio-4@2x.jpg 2x"
+									type="image/jpg"
+								/>
+
+								<!-- mobile screen -->
+								<source
+									media="(max-width: 767px)"
+									srcset="./images/mobile/portfolio-4.webp 1x, ./images/mobile/portfolio-4@2x.webp 2x"
+									type="image/webp"
+								/>
+								<source
+									media="(max-width: 767px)"
+									srcset="./images/mobile/portfolio-4.jpg 1x, ./images/mobile/portfolio-4@2x.jpg 2x"
+									type="image/jpg"
+								/>
+								<img src="./images/mobile/portfolio-4@2x.webp" alt="примеры работ 4" width="418" height="360" />
+							</picture>
 							<div class="overlay">
 								<p class="overlay__desc">
 									Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, tenetur! Lorem ipsum dolor sit amet
@@ -477,7 +609,7 @@
 						</li>
 					</ul>
 				</div>
-			</section> -->
+			</section>
 			<!-- contacts -->
 			<!-- <section class="contacts">
 				<div class="container">
@@ -537,12 +669,23 @@
 			</div>
 		</footer> -->
 
-		<script
+		<!-- Modal window -->
+		<div class="backdrop is-hidden" data-modal>
+			<div class="modal">
+				<button class="modal-btn" type="button" data-modal-close>
+					<svg width="20" height="20">
+						<use href="./images/icons.svg#menu-close"></use>
+					</svg>
+				</button>
+			</div>
+		</div>
+
+		<!-- <script
 			defer
 			src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
 			integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
 			crossorigin="anonymous"
-		></script>
+		></script> -->
 		<!-- <script defer src="js/mobile-menu.js"></script> -->
 		<script src="./js/header-scroll.js"></script>
 		<script src="./js/modal.js"></script>

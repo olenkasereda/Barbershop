@@ -15,6 +15,10 @@ body.no-scroll {
 	overflow-y: hidden;
 }
 
-// body .mobile-menu.is-open {
-// 	overflow: hidden;
-// }
+.mobile-menu.is-open body {
+	overflow: hidden;
+}
+
+.no-scroll {
+	overflow-y: hidden;
+}
